@@ -1,0 +1,55 @@
+{
+  "_from": "https://gitee.com/ren3003/cordova-plugin-dwj-autostart.git",
+  "_id": "cordova-plugin-dwj-autostart@0.0.2",
+  "_inBundle": false,
+  "_integrity": "sha512-I+W+2hrARgiUv4fE/RgjeQ2m19JYXPzbvWA/4w8/vMOBO/xLHTyAMkmZz5IHwAeQjyNoAqmiMXpX3S0JWeDI6g==",
+  "_location": "/cordova-plugin-dwj-autostart",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "remote",
+    "raw": "https://gitee.com/ren3003/cordova-plugin-dwj-autostart.git",
+    "rawSpec": "https://gitee.com/ren3003/cordova-plugin-dwj-autostart.git",
+    "saveSpec": "https://gitee.com/ren3003/cordova-plugin-dwj-autostart.git",
+    "fetchSpec": "https://gitee.com/ren3003/cordova-plugin-dwj-autostart.git"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://gitee.com/ren3003/cordova-plugin-dwj-autostart.git",
+  "_shasum": "a79eeaa8411d07414586679ba7ddda6162ffe98c",
+  "_spec": "https://gitee.com/ren3003/cordova-plugin-dwj-autostart.git",
+  "_where": "F:\\test\\test",
+  "author": {
+    "name": "prz"
+  },
+  "bundleDependencies": false,
+  "cordova": {
+    "id": "cordova-plugin-autstart",
+    "platforms": [
+      "android"
+    ]
+  },
+  "deprecated": false,
+  "description": "cordova 开机启动插件",
+  "devDependencies": {
+    "jshint": "^2.6.0"
+  },
+  "engines": {},
+  "keywords": [
+    "cordova",
+    "plugin",
+    "autostart"
+  ],
+  "license": "ISC",
+  "main": "index.js",
+  "name": "cordova-plugin-dwj-autostart",
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/ren3003/cordova-plugin-dwj-autostart.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.0.2"
+}

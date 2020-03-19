@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    id="cordova-plugin-dwj-autostart"
+    version="0.0.2">
+	
+	<name>Auto Start</name>
+	
+	<description>Cordova AutoStart Plugin</description>
+    <license>ISC</license>
+    <keywords>cordova,file</keywords>
+    <repo>https://gitee.com/ren3003/cordova-plugin-autostart.git</repo>
+    <issue>https://gitee.com/ren3003/cordova-plugin-autostart/issues</issue>
+	<!-- android -->
+    <platform name="android">
+		<!-- 修改配置 -->
+		<edit-config file="AndroidManifest.xml"  target="/manifest" mode="merge">
+            <manifest android:installLocation="internalOnly"/>
+        </edit-config>
+
+		<config-file target="./AndroidManifest.xml" parent="/manifest">
+			<!-- 配置权限 -->
+			<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+		    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+		    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+		</config-file>
+
+		<config-file target="./AndroidManifest.xml" parent="/manifest/application">	
+			<receiver
+            android:name="com.dwj.autostart.receiver.BootReceiver"
+            android:enabled="true"
+            android:exported="true">
+	            <intent-filter android:priority="1000" >
+	                <action android:name="android.intent.action.BOOT_COMPLETED" />
+	                <action android:name="android.media.AUDIO_BECOMING_NOISY" />
+	                <action android:name="android.intent.action.REBOOT"></action>
+	                <action android:name="android.intent.action.SCREEN_ON"></action>
+	            </intent-filter>
+	        </receiver>
+		</config-file>
+
+		<source-file src="src/android/BootReceiver.java" target-dir="src/com/dwj/autostart/receiver"></source-file>
+		<source-file src="src/android/LogToFile.java" target-dir="src/com/dwj/autostart/util"></source-file>
+    </platform>
+
+</plugin>
