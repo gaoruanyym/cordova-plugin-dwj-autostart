@@ -44,7 +44,7 @@ public class BootReceiver extends BroadcastReceiver {
                         LogToFile.e(TAG,"错误：" + e.getMessage());
                     }
                 }
-            },18000,18000);
+            },5000);
         }
 
     }
