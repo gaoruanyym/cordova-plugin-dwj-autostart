@@ -28,7 +28,7 @@ public class BootReceiver extends BroadcastReceiver {
         LogToFile.init(context);
         LogToFile.i(TAG,"接收广播" + intent.getAction());
         if(timer == null) {
-            Toast.makeText(context,"已开机，正在启指挥调度平台",Toast.LENGTH_LONG).show();
+            Toast.makeText(context,"已开机，正在启动指挥调度平台",Toast.LENGTH_LONG).show();
         }
         pm = context.getPackageManager();
 
@@ -38,7 +38,7 @@ public class BootReceiver extends BroadcastReceiver {
                 @Override
                 public void run() {
                     try{
-                        Intent kpyzintent = pm.getLaunchIntentForPackage("com.kpyzcs.screen");
+                        Intent kpyzintent = pm.getLaunchIntentForPackage("com.zhdd.screen");
                         context.startActivity(kpyzintent);
                     }catch (Exception e) {
                         LogToFile.e(TAG,"错误：" + e.getMessage());
