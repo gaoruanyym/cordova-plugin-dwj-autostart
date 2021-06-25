@@ -38,8 +38,8 @@ public class BootReceiver extends BroadcastReceiver {
                 @Override
                 public void run() {
                     try{
-                        Intent kpyzintent = pm.getLaunchIntentForPackage("com.zhdd.screen");
-                        context.startActivity(kpyzintent);
+                        Intent zhddintent = pm.getLaunchIntentForPackage("com.zhdd.screen");
+                        context.startActivity(zhddintent);
                     }catch (Exception e) {
                         LogToFile.e(TAG,"错误：" + e.getMessage());
                     }
